@@ -138,6 +138,8 @@ namespace HumphreyErik20CardWars
                     cardNumber[itemPicked] = cardNumber[remaining - 1];
                     cardNumber[remaining - 1] = tempValue;
                 }
+
+                cardIndex = 0;
             }
 
             // Assign a card to each player
