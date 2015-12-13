@@ -110,7 +110,7 @@
             // 
             this.lblStatusMessage.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblStatusMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusMessage.Location = new System.Drawing.Point(40, 263);
+            this.lblStatusMessage.Location = new System.Drawing.Point(44, 263);
             this.lblStatusMessage.Name = "lblStatusMessage";
             this.lblStatusMessage.Size = new System.Drawing.Size(226, 30);
             this.lblStatusMessage.TabIndex = 9;
@@ -143,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 361);
+            this.ClientSize = new System.Drawing.Size(311, 361);
             this.Controls.Add(this.picCardUser);
             this.Controls.Add(this.picCardCPU);
             this.Controls.Add(this.lblStatusMessage);
@@ -153,8 +153,11 @@
             this.Controls.Add(this.lblTitleCPU);
             this.Controls.Add(this.btnQuitStop);
             this.Controls.Add(this.btnNewGameNextCard);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmCardWars";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Card Wars";
             this.Load += new System.EventHandler(this.frmCardWars_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picCardUser)).EndInit();

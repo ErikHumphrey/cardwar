@@ -201,6 +201,7 @@ namespace HumphreyErik20CardWars
             if (cardIndex > 25)
             {
                 // End the game: print results
+                // All outcomes have been tested
                 MessageBox.Show("There are no more cards to draw!", "Game over");
                 MessageBox.Show("You scored " + scoreUser + " points.", "Game over");
                 MessageBox.Show("Computer scored " + scoreCPU + " points.", "Game over");
