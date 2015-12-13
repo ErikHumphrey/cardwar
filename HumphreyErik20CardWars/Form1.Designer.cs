@@ -37,6 +37,8 @@
             this.lblStatusMessage = new System.Windows.Forms.Label();
             this.picCardUser = new System.Windows.Forms.PictureBox();
             this.picCardCPU = new System.Windows.Forms.PictureBox();
+            this.lblCard = new System.Windows.Forms.Label();
+            this.lblCard2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picCardUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCardCPU)).BeginInit();
             this.SuspendLayout();
@@ -138,11 +140,31 @@
             this.picCardCPU.TabIndex = 11;
             this.picCardCPU.TabStop = false;
             // 
+            // lblCard
+            // 
+            this.lblCard.AutoSize = true;
+            this.lblCard.Location = new System.Drawing.Point(231, 309);
+            this.lblCard.Name = "lblCard";
+            this.lblCard.Size = new System.Drawing.Size(35, 13);
+            this.lblCard.TabIndex = 12;
+            this.lblCard.Text = "label1";
+            // 
+            // lblCard2
+            // 
+            this.lblCard2.AutoSize = true;
+            this.lblCard2.Location = new System.Drawing.Point(231, 333);
+            this.lblCard2.Name = "lblCard2";
+            this.lblCard2.Size = new System.Drawing.Size(35, 13);
+            this.lblCard2.TabIndex = 13;
+            this.lblCard2.Text = "label1";
+            // 
             // frmCardWars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(315, 368);
+            this.Controls.Add(this.lblCard2);
+            this.Controls.Add(this.lblCard);
             this.Controls.Add(this.picCardUser);
             this.Controls.Add(this.picCardCPU);
             this.Controls.Add(this.lblStatusMessage);
@@ -173,6 +195,8 @@
         private System.Windows.Forms.Label lblStatusMessage;
         private System.Windows.Forms.PictureBox picCardUser;
         private System.Windows.Forms.PictureBox picCardCPU;
+        private System.Windows.Forms.Label lblCard;
+        private System.Windows.Forms.Label lblCard2;
     }
 }
 

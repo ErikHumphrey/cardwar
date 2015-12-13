@@ -158,14 +158,14 @@ namespace HumphreyErik20CardWars
             else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 51)
                 numberUser = cardNumber[cardIndex] - 39;
 
-            if (cardNumber[cardIndex] >= 0 && cardNumber[cardIndex] <= 12)
-                numberCPU = cardNumber[cardIndex];
-            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 25)
-                numberCPU = cardNumber[cardIndex] - 13;
-            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 38)
-                numberCPU = cardNumber[cardIndex] - 26;
-            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 51)
-                numberCPU = cardNumber[cardIndex] - 39;
+            if (cardNumber[cardIndex + 26] >= 0 && cardNumber[cardIndex + 26] <= 12)
+                numberCPU = cardNumber[cardIndex + 26];
+            else if (cardNumber[cardIndex + 26] >= 13 && cardNumber[cardIndex + 26] <= 25)
+                numberCPU = cardNumber[cardIndex + 26] - 13;
+            else if (cardNumber[cardIndex + 26] >= 13 && cardNumber[cardIndex + 26] <= 38)
+                numberCPU = cardNumber[cardIndex + 26] - 26;
+            else if (cardNumber[cardIndex + 26] >= 13 && cardNumber[cardIndex + 26] <= 51)
+                numberCPU = cardNumber[cardIndex + 26] - 39;
 
             // Win: User gets two points for having the higher card value
             if (numberUser > numberCPU)
