@@ -201,7 +201,7 @@ namespace HumphreyErik20CardWars
             if (cardIndex > 25)
             {
                 // End the game: print results
-                MessageBox.Show("Both players are out of cards to draw!", "Game over");
+                MessageBox.Show("There are no more cards to draw!", "Game over");
                 MessageBox.Show("You scored " + scoreUser + " points.", "Game over");
                 MessageBox.Show("Computer scored " + scoreCPU + " points.", "Game over");
                 if (scoreUser > scoreCPU)
@@ -235,10 +235,7 @@ namespace HumphreyErik20CardWars
                 this.Close();
             else
             {
-                if (scoreUser > scoreCPU)
-                {
-
-                }
+                btnNewGameNextCard.Text = "New game";
                 btnQuitStop.Text = "Quit game";
             }
         }
