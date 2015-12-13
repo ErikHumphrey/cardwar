@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCardWars));
             this.btnNewGameNextCard = new System.Windows.Forms.Button();
             this.btnQuitStop = new System.Windows.Forms.Button();
             this.lblTitleCPU = new System.Windows.Forms.Label();
@@ -152,6 +153,7 @@
             this.Controls.Add(this.lblTitleCPU);
             this.Controls.Add(this.btnQuitStop);
             this.Controls.Add(this.btnNewGameNextCard);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCardWars";
             this.Text = "Card Wars";
             this.Load += new System.EventHandler(this.frmCardWars_Load);
