@@ -1,5 +1,5 @@
 ## cardwar
-Simple .NET version of card game War, where player who draws the highest card wins. This is a singleplayer version versus a computer.
+Simple .NET version of card game War, where player who draws the highest value card wins. This is a singleplayer version versus a computer.
 
 ##Gameplay 
 
