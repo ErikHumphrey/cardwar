@@ -95,23 +95,121 @@ namespace HumphreyErik20CardWars
             picCards[51] = Properties.Resources.SA;
         }
 
+        // User can start a game or get the next card by clicking a button or their card
+
         private void btnNewGameNextCard_Click(object sender, EventArgs e)
         {
+            clickedButtonOrCard();
+        }
+
+        private void picCardUser_Click(object sender, EventArgs e)
+        {
+            clickedButtonOrCard();
+        }
+
+        void clickedButtonOrCard()
+        {
+            int numberUser, numberCPU;
+
             if (btnNewGameNextCard.Text == "New game")
             {
                 btnNewGameNextCard.Text = "Next card";
                 btnQuitStop.Text = "Stop game";
                 scoreCPU = scoreUser = 0;
-                lblScoreCPUTitle.Font = BNB;
+                lblTitleCPU.Font = BNB;
+                lblScoreCPU.Text = lblScoreUser.Text = "0";
 
-
+                for (int i = 0; i < 52; i++)
+                {
+                    cardNumber[i] = i;
+                }
             }
+
+            // Assign a card to each player
+            numberUser = cardNumber[cardIndex];
+            numberCPU = cardNumber[cardIndex + 26]; // Computer uses second half of 52-card deck
+
+            // Display image of assigned cards
+            picCardUser.Image = picCards[numberUser];
+            picCardCPU.Image = picCards[numberCPU];
+
+            // Assign new numbers based on suit and rank (pips A-10 and face cards)
+            if (cardNumber[cardIndex] >= 0 && cardNumber[cardIndex] <= 12)
+                numberUser = cardNumber[cardIndex];
+            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 25)
+                numberUser = cardNumber[cardIndex] - 13;
+            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 38)
+                numberUser = cardNumber[cardIndex] - 26;
+            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 51)
+                numberUser = cardNumber[cardIndex] - 39;
+
+            if (cardNumber[cardIndex] >= 0 && cardNumber[cardIndex] <= 12)
+                numberCPU = cardNumber[cardIndex];
+            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 25)
+                numberCPU = cardNumber[cardIndex] - 13;
+            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 38)
+                numberCPU = cardNumber[cardIndex] - 26;
+            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 51)
+                numberCPU = cardNumber[cardIndex] - 39;
+
+            // Win: User gets two points for having the higher card value
+            if (numberUser > numberCPU)
+            {
+                scoreUser += 2;
+                lblScoreUser.Text = scoreUser.ToString();
+                lblStatusMessage.ForeColor = System.Drawing.Color.Green;
+                lblStatusMessage.Text = "You won the round!";
+            }
+            // Lose: Computer gets two points for having the higher card value
+            else if (numberUser < numberCPU)
+            {
+                scoreCPU += 2;
+                lblScoreCPU.Text = scoreCPU.ToString();
+                lblStatusMessage.ForeColor = System.Drawing.Color.Red;
+                lblStatusMessage.Text = "You lost the round.";
+            }
+            // Tie: User and computer get a point for having equal card values
             else
             {
-                btnNewGameNextCard.Text = "New game";
+                scoreUser++;
+                scoreCPU++;
+                lblScoreUser.Text = scoreUser.ToString();
+                lblScoreCPU.Text = scoreCPU.ToString();
+                lblStatusMessage.ForeColor = System.Drawing.Color.Blue;
+                lblStatusMessage.Text = "You tied this round.";
             }
 
+            cardIndex++;
+            // Check if all cards have been drawn
+            if (cardIndex > 25)
+            {
+                // End the game: print results
+                MessageBox.Show("Both players are out of cards to draw!", "Game over");
+                MessageBox.Show("You scored " + scoreUser + " points.", "Game over");
+                MessageBox.Show("Computer scored " + scoreCPU + " points.", "Game over");
+                if (scoreUser > scoreCPU)
+                {
+                    MessageBox.Show("You win the game!", "Game over");
+                    lblStatusMessage.ForeColor = System.Drawing.Color.Green;
+                    lblStatusMessage.Text = "You won the game!";
+                }
+                else if (scoreUser < scoreCPU)
+                {
+                    MessageBox.Show("Computer wins the game!", "Game over");
+                    lblStatusMessage.ForeColor = System.Drawing.Color.Red;
+                    lblStatusMessage.Text = "Computer won the game.";
+                }
+                else
+                {
+                    MessageBox.Show("The game ends in a draw!", "Game over");
+                    lblStatusMessage.ForeColor = System.Drawing.Color.Blue;
+                    lblStatusMessage.Text = "The game ended in a draw.";
+                }
 
+                // Reset buttons
+                btnNewGameNextCard.Text = "New game";
+                btnQuitStop.Text = "Quit game";
+            }
         }
 
         private void btnQuitStop_Click(object sender, EventArgs e)

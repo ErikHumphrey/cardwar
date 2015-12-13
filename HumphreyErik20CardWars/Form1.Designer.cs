@@ -30,11 +30,15 @@
         {
             this.btnNewGameNextCard = new System.Windows.Forms.Button();
             this.btnQuitStop = new System.Windows.Forms.Button();
-            this.lblScoreCPUTitle = new System.Windows.Forms.Label();
-            this.lblScoreUserTitle = new System.Windows.Forms.Label();
+            this.lblTitleCPU = new System.Windows.Forms.Label();
+            this.lblTitleUser = new System.Windows.Forms.Label();
             this.lblScoreCPU = new System.Windows.Forms.Label();
             this.lblScoreUser = new System.Windows.Forms.Label();
             this.lblStatusMessage = new System.Windows.Forms.Label();
+            this.picCardUser = new System.Windows.Forms.PictureBox();
+            this.picCardCPU = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picCardUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCardCPU)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNewGameNextCard
@@ -57,27 +61,27 @@
             this.btnQuitStop.UseVisualStyleBackColor = true;
             this.btnQuitStop.Click += new System.EventHandler(this.btnQuitStop_Click);
             // 
-            // lblScoreCPUTitle
+            // lblTitleCPU
             // 
-            this.lblScoreCPUTitle.AutoSize = true;
-            this.lblScoreCPUTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblScoreCPUTitle.Font = new System.Drawing.Font("Bebas Neue Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScoreCPUTitle.Location = new System.Drawing.Point(163, 45);
-            this.lblScoreCPUTitle.Name = "lblScoreCPUTitle";
-            this.lblScoreCPUTitle.Size = new System.Drawing.Size(41, 29);
-            this.lblScoreCPUTitle.TabIndex = 3;
-            this.lblScoreCPUTitle.Text = "CPU";
+            this.lblTitleCPU.AutoSize = true;
+            this.lblTitleCPU.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleCPU.Font = new System.Drawing.Font("Bebas Neue Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleCPU.Location = new System.Drawing.Point(163, 45);
+            this.lblTitleCPU.Name = "lblTitleCPU";
+            this.lblTitleCPU.Size = new System.Drawing.Size(41, 29);
+            this.lblTitleCPU.TabIndex = 3;
+            this.lblTitleCPU.Text = "CPU";
             // 
-            // lblScoreUserTitle
+            // lblTitleUser
             // 
-            this.lblScoreUserTitle.AutoSize = true;
-            this.lblScoreUserTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblScoreUserTitle.Font = new System.Drawing.Font("Bebas Neue Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScoreUserTitle.Location = new System.Drawing.Point(46, 45);
-            this.lblScoreUserTitle.Name = "lblScoreUserTitle";
-            this.lblScoreUserTitle.Size = new System.Drawing.Size(43, 29);
-            this.lblScoreUserTitle.TabIndex = 4;
-            this.lblScoreUserTitle.Text = "YOU";
+            this.lblTitleUser.AutoSize = true;
+            this.lblTitleUser.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitleUser.Font = new System.Drawing.Font("Bebas Neue Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleUser.Location = new System.Drawing.Point(46, 45);
+            this.lblTitleUser.Name = "lblTitleUser";
+            this.lblTitleUser.Size = new System.Drawing.Size(43, 29);
+            this.lblTitleUser.TabIndex = 4;
+            this.lblTitleUser.Text = "YOU";
             // 
             // lblScoreCPU
             // 
@@ -105,28 +109,54 @@
             // 
             this.lblStatusMessage.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblStatusMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatusMessage.Location = new System.Drawing.Point(21, 155);
+            this.lblStatusMessage.Location = new System.Drawing.Point(21, 339);
             this.lblStatusMessage.Name = "lblStatusMessage";
             this.lblStatusMessage.Size = new System.Drawing.Size(226, 30);
             this.lblStatusMessage.TabIndex = 9;
             this.lblStatusMessage.Text = "Click \"New game\" to begin.";
             this.lblStatusMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // picCardUser
+            // 
+            this.picCardUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picCardUser.Image = global::HumphreyErik20CardWars.Properties.Resources.BlueBack;
+            this.picCardUser.Location = new System.Drawing.Point(2, 138);
+            this.picCardUser.Name = "picCardUser";
+            this.picCardUser.Size = new System.Drawing.Size(135, 143);
+            this.picCardUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCardUser.TabIndex = 10;
+            this.picCardUser.TabStop = false;
+            this.picCardUser.Click += new System.EventHandler(this.picCardUser_Click);
+            // 
+            // picCardCPU
+            // 
+            this.picCardCPU.Image = global::HumphreyErik20CardWars.Properties.Resources.RedBack;
+            this.picCardCPU.Location = new System.Drawing.Point(117, 138);
+            this.picCardCPU.Name = "picCardCPU";
+            this.picCardCPU.Size = new System.Drawing.Size(135, 143);
+            this.picCardCPU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCardCPU.TabIndex = 11;
+            this.picCardCPU.TabStop = false;
+            // 
             // frmCardWars
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 540);
+            this.Controls.Add(this.picCardCPU);
+            this.Controls.Add(this.picCardUser);
             this.Controls.Add(this.lblStatusMessage);
             this.Controls.Add(this.lblScoreUser);
             this.Controls.Add(this.lblScoreCPU);
-            this.Controls.Add(this.lblScoreUserTitle);
-            this.Controls.Add(this.lblScoreCPUTitle);
+            this.Controls.Add(this.lblTitleUser);
+            this.Controls.Add(this.lblTitleCPU);
             this.Controls.Add(this.btnQuitStop);
             this.Controls.Add(this.btnNewGameNextCard);
             this.Name = "frmCardWars";
             this.Text = "Card Wars";
             this.Load += new System.EventHandler(this.frmCardWars_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picCardUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCardCPU)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,11 +166,13 @@
 
         private System.Windows.Forms.Button btnNewGameNextCard;
         private System.Windows.Forms.Button btnQuitStop;
-        private System.Windows.Forms.Label lblScoreCPUTitle;
-        private System.Windows.Forms.Label lblScoreUserTitle;
+        private System.Windows.Forms.Label lblTitleCPU;
+        private System.Windows.Forms.Label lblTitleUser;
         private System.Windows.Forms.Label lblScoreCPU;
         private System.Windows.Forms.Label lblScoreUser;
         private System.Windows.Forms.Label lblStatusMessage;
+        private System.Windows.Forms.PictureBox picCardUser;
+        private System.Windows.Forms.PictureBox picCardCPU;
     }
 }
 
