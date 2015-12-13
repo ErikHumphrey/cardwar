@@ -43,7 +43,7 @@
             // 
             // btnNewGameNextCard
             // 
-            this.btnNewGameNextCard.Location = new System.Drawing.Point(124, 302);
+            this.btnNewGameNextCard.Location = new System.Drawing.Point(124, 304);
             this.btnNewGameNextCard.Name = "btnNewGameNextCard";
             this.btnNewGameNextCard.Size = new System.Drawing.Size(75, 23);
             this.btnNewGameNextCard.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             // btnQuitStop
             // 
-            this.btnQuitStop.Location = new System.Drawing.Point(124, 331);
+            this.btnQuitStop.Location = new System.Drawing.Point(124, 333);
             this.btnQuitStop.Name = "btnQuitStop";
             this.btnQuitStop.Size = new System.Drawing.Size(75, 23);
             this.btnQuitStop.TabIndex = 1;

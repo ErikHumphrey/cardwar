@@ -41,6 +41,8 @@ namespace HumphreyErik20CardWars
 
         private void frmCardWars_Load(object sender, EventArgs e)
         {
+            lblTitleUser.Font = lblTitleCPU.Font = BNB;
+
             picCards[0] = Properties.Resources.H2;
             picCards[1] = Properties.Resources.H3;
             picCards[2] = Properties.Resources.H4;
@@ -116,12 +118,25 @@ namespace HumphreyErik20CardWars
                 btnNewGameNextCard.Text = "Next card";
                 btnQuitStop.Text = "Stop game";
                 scoreCPU = scoreUser = 0;
-                lblTitleCPU.Font = BNB;
                 lblScoreCPU.Text = lblScoreUser.Text = "0";
+
+                // Assign cards appropriate numbers
 
                 for (int i = 0; i < 52; i++)
                 {
                     cardNumber[i] = i;
+                }
+
+                // Shuffle the deck / numbers in the array by swapping random cards with the bottom card
+
+                for (int remaining = 52; remaining >= 1; remaining--)
+                {
+                    // Pick an item at random
+                    int itemPicked = rnd.Next(remaining);
+                    // Swap picked item with bottom item
+                    int tempValue = cardNumber[itemPicked];
+                    cardNumber[itemPicked] = cardNumber[remaining - 1];
+                    cardNumber[remaining - 1] = tempValue;
                 }
             }
 
