@@ -5,7 +5,7 @@ Simple .NET version of card game War, where player who draws the highest card wi
 
 ![Initial interface](http://i.imgur.com/8vpEwB8.png)
 
-The game uses the standard deck of 52 French playing cards. Click on your deck or "Start game" to shuffle the deck and draw a card. The computer will draw their card as well.
+The game uses the standard deck of 52 French playing cards. Click on your deck or "Start game" to shuffle the deck and draw a card. The computer will reveal their card as well.
 
 You gain points depending on the value of your card compared to the computer's.
 
