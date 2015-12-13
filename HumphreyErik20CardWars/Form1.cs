@@ -36,7 +36,7 @@ namespace HumphreyErik20CardWars
             AddFontMemResourceEx(fontPtr, (uint)Properties.Resources.BNB.Length, IntPtr.Zero, ref dummy);
             System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
 
-            BNB = new Font(fonts.Families[0], 24.0F); // Declare bundled Bebas Neue Bold font
+            BNB = new Font(fonts.Families[0], 17.9999981F); // Declare bundled Bebas Neue Bold font
         }
 
         private void frmCardWars_Load(object sender, EventArgs e)
