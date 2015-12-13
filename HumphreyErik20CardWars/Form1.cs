@@ -6,11 +6,11 @@
     \____/ \__,_||_|    \__,_|  \/  \/  \__,_||_|   |___/ */
 
 /* Author: Erik Humphrey
- * Project title: Project 11 - Dancing Banana
- * Date created: November 2015
+ * Project title: Project 20 - Card Wars
+ * Date started: December 13th 2015
  * Executable name: HumphreyErik20CardWars.exe
  * Description: Simple simulation of the card game War, where player who draws the highest card value wins, versus a computer
-*/
+ */
 
 using System;
 using System.Collections.Generic;
@@ -165,23 +165,15 @@ namespace HumphreyErik20CardWars
             picCardCPU.Image = picCards[numberCPU];
 
             // Assign new numbers based on suit and rank (pips A-10 and face cards)
-            if (cardNumber[cardIndex] >= 0 && cardNumber[cardIndex] <= 12)
-                numberUser = cardNumber[cardIndex];
-            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 25)
-                numberUser = cardNumber[cardIndex] - 13;
-            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 38)
-                numberUser = cardNumber[cardIndex] - 26;
-            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 51)
-                numberUser = cardNumber[cardIndex] - 39;
+            if (cardNumber[cardIndex] >= 0 && cardNumber[cardIndex] <= 12) numberUser = cardNumber[cardIndex];
+            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 25) numberUser = cardNumber[cardIndex] - 13;
+            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 38) numberUser = cardNumber[cardIndex] - 26;
+            else if (cardNumber[cardIndex] >= 13 && cardNumber[cardIndex] <= 51) numberUser = cardNumber[cardIndex] - 39;
 
-            if (cardNumber[cardIndex + 26] >= 0 && cardNumber[cardIndex + 26] <= 12)
-                numberCPU = cardNumber[cardIndex + 26];
-            else if (cardNumber[cardIndex + 26] >= 13 && cardNumber[cardIndex + 26] <= 25)
-                numberCPU = cardNumber[cardIndex + 26] - 13;
-            else if (cardNumber[cardIndex + 26] >= 13 && cardNumber[cardIndex + 26] <= 38)
-                numberCPU = cardNumber[cardIndex + 26] - 26;
-            else if (cardNumber[cardIndex + 26] >= 13 && cardNumber[cardIndex + 26] <= 51)
-                numberCPU = cardNumber[cardIndex + 26] - 39;
+            if (cardNumber[cardIndex + 26] >= 0 && cardNumber[cardIndex + 26] <= 12) numberCPU = cardNumber[cardIndex + 26];
+            else if (cardNumber[cardIndex + 26] >= 13 && cardNumber[cardIndex + 26] <= 25) numberCPU = cardNumber[cardIndex + 26] - 13;
+            else if (cardNumber[cardIndex + 26] >= 13 && cardNumber[cardIndex + 26] <= 38) numberCPU = cardNumber[cardIndex + 26] - 26;
+            else if (cardNumber[cardIndex + 26] >= 13 && cardNumber[cardIndex + 26] <= 51) numberCPU = cardNumber[cardIndex + 26] - 39;
 
             // Win: User gets two points for having the higher card value
             if (numberUser > numberCPU)
@@ -246,8 +238,7 @@ namespace HumphreyErik20CardWars
 
         private void btnQuitStop_Click(object sender, EventArgs e)
         {
-            if (btnQuitStop.Text == "Quit game")
-                this.Close();
+            if (btnQuitStop.Text == "Quit game") this.Close();
             else
             {
                 btnNewGameNextCard.Text = "New game";
