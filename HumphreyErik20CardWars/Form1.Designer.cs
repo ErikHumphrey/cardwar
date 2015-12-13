@@ -131,7 +131,7 @@
             // 
             // picCardCPU
             // 
-            this.picCardCPU.Image = global::HumphreyErik20CardWars.Properties.Resources.RedBack;
+            this.picCardCPU.Image = global::HumphreyErik20CardWars.Properties.Resources.BlueBack;
             this.picCardCPU.Location = new System.Drawing.Point(157, 106);
             this.picCardCPU.Name = "picCardCPU";
             this.picCardCPU.Size = new System.Drawing.Size(135, 143);

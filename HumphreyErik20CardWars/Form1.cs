@@ -1,4 +1,18 @@
-﻿using System;
+﻿/*  _____                   _   _    _                   
+   /  __ \                 | | | |  | |                  
+   | /  \/  __ _  _ __   __| | | |  | |  __ _  _ __  ___ 
+   | |     / _` || '__| / _` | | |/\| | / _` || '__|/ __|
+   | \__/\| (_| || |   | (_| | \  /\  /| (_| || |   \__ \
+    \____/ \__,_||_|    \__,_|  \/  \/  \__,_||_|   |___/ */
+
+/* Author: Erik Humphrey
+ * Project title: Project 11 - Dancing Banana
+ * Date created: November 2015
+ * Executable name: HumphreyErik20CardWars.exe
+ * Description: Simple simulation of the card game War, where player who draws the highest card value wins, versus a computer
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
